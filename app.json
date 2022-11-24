@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "nshades",
+    "slug": "nshades",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "nshades"
+}
