@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Notifications = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor:'white'}}>
     <View style={{backgroundColor:'white'}}>
       <View style={{  shadowColor: '#000',
   shadowOffset: { width: 0, height: 2 },
@@ -17,6 +17,12 @@ const Notifications = () => {
       <Divider width={2} orientation='vertical' style={{marginTop:15,borderRadius:10,elevation:10}}/>
       </View>
       
+    </View>
+
+
+    <View style={{height:100,width:matchMedia,margin:20,backgroundColor:'rgba(127,127,127,0.09)',borderRadius:12}}>
+      <Text>Hello World</Text>
+
     </View>
     </SafeAreaView>
   )

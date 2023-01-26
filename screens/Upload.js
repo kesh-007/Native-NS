@@ -1,10 +1,23 @@
 import { View, Text } from 'react-native'
-import React from 'react'
-
+import React, { useState, useCallback, useEffect } from 'react'
+import {auth} from '../FireBase/firebase'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { Button } from 'react-native-elements'
 const Upload = () => {
+  
+
+  
+  
+
+
   return (
     <View>
-      <Text>Upload</Text>
+      <SafeAreaView>
+      <Text>Hello</Text>
+      <Button title="Logout" onPress={()=>{auth.signOut();}}/>
+     
+    </SafeAreaView>
+
     </View>
   )
 }

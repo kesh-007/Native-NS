@@ -9,21 +9,38 @@ import Notifications from './screens/Notifications';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Upload from './screens/Upload';
+import LoginPage from './LoginPage' 
+import {auth,db,provider} from './FireBase/firebase'
+import { useAuthState } from 'react-firebase-hooks/auth';
 export default function App() {
+  const [user]= useAuthState(auth)
 
   return (
-    <NavigationContainer style={{backgroundcolor:'red'}}>
-   <BottomTabs/>
-    </NavigationContainer>
+    <>    
+    {user?
+    <MainPage/>
+    :
+    <LoginPage/>
+    }
+    </>
+
+    
 
   
   );
 }
 
+const MainPage = ()=>
+(
+  <NavigationContainer style={{backgroundcolor:'red'}}>
+   <BottomTabs/>
+    </NavigationContainer>
+    
 
+)
 const Stack=createStackNavigator();
 
-const HomeStack=({navigation})=>(
+const HomeStack=()=>(
   <Stack.Navigator screenOptions={{headerShown:false}}>
     <Stack.Screen name="HomePage" component={HomePage}/>
     <Stack.Screen name="Upload" component={Upload}/>

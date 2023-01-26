@@ -116,8 +116,11 @@ export default function Post(props){
                                     :
                                     <View/>
                                 }
+                                
                             </TouchableOpacity>
+                            
                         </View>
+                        
                     }
                 </View>
                 {

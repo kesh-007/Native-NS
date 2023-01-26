@@ -5,7 +5,26 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
+    ],
+    "plugins": [
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "1335722237193015",
+          "clientToken": "6067d88641755ae606776a5c52ba92a3",
+          "displayName": "Ads",
+          "advertiserIDCollectionEnabled": false,
+          "autoLogAppEventsEnabled": false,
+          "isAutoInitEnabled": true,
+          "iosUserTrackingPermission": "This identifier will be used to deliver personalized ads to you."
+        }
+      ]
+    
     ]
+  
+
   },
   "name": "nshades"
 }
+
+
